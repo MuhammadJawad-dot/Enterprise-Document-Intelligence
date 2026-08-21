@@ -33,10 +33,10 @@ class IndexManager:
         print("[SUCCESS] Tree Index created")
 
     def get_vector_engine(self):
-
         return self.vector_index.as_query_engine(
-            similarity_top_k=5
+            similarity_top_k=10
         )
+
 
     def get_tree_engine(self):
 

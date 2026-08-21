@@ -2,6 +2,8 @@ from pathlib import Path
 from llama_index.core import Document
 from llama_index.readers.file import PDFReader
 from docx import Document as DocxDocument
+import pandas as pd
+
 
 
 class EnterpriseLoader:
@@ -48,3 +50,12 @@ class EnterpriseLoader:
         )
 
         return [doc]
+
+
+class StructuredDataLoader:
+
+    def load_csv(self, file_path):
+
+        df = pd.read_csv(file_path)
+
+        return df
